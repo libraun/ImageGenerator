@@ -1,0 +1,7 @@
+datasets==2.20.0
+numpy==2.2.2
+Pillow==11.1.0
+Requests==2.32.3
+torch==2.3.1
+torchtext==0.18.0
+pytorch-msssim==1.0.0
