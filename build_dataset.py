@@ -61,10 +61,10 @@ if __name__ == "__main__":
     MAX_SEQ_LENGTH = 10
     TRAIN_SPLIT_RATIO = 0.9
 
-    OUTPUT_DIR_PREFIX = "./storage/"
+    OUTPUT_DIRECTORY = "./storage/"
 
-    TRAIN_OUTPUT_PATH = f"{OUTPUT_DIR_PREFIX}train_dataloader.pickle"
-    VALID_OUTPUT_PATH = f"{OUTPUT_DIR_PREFIX}valid_dataloader.pickle"
+    TRAIN_OUTPUT_PATH = f"{OUTPUT_DIRECTORY}train_dataloader.pickle"
+    VALID_OUTPUT_PATH = f"{OUTPUT_DIRECTORY}valid_dataloader.pickle"
 
     ds = load_dataset("google-research-datasets/conceptual_captions", "unlabeled")
 
@@ -88,7 +88,7 @@ if __name__ == "__main__":
         corpus=train_captions + valid_captions, 
         specials=["<PAD>", "<UNK>"], 
         default_token="<UNK>", 
-        save_directory=OUTPUT_DIR_PREFIX)
+        output_directory=OUTPUT_DIRECTORY)
     
     train_vocab_captions = [[vocab_stoi[tok] if tok in vocab_stoi else 1
                        for tok in caption.lower().split()[:MAX_SEQ_LENGTH]] 
