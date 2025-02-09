@@ -1,3 +1,6 @@
 [submodule "DatasetHelper"]
-	path = DatasetHelper
+	path = ./modules/DatasetHelper
 	url = git@github.com:libraun/DatasetHelper.git
+[submodule "TextTensorizer"]
+	path = ./modules/TextTensorizer
+	url = git@github.com:libraun/TextTensorizer.git
